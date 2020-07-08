@@ -1,38 +1,147 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  box-sizing: border-box;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+}
+
+.nav-header {
+
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 100;
+  /* background-color: white; */
+}
+
+.navbar img {
+  height: 5rem;
+  margin-left: 1rem;
+}
+
+.nav-button {
+  background-color: white;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  margin-right: 1rem;
+  outline: none;
+}
+
+.navbar ul {
+
+  width: 90%;
+  margin: 0 auto;
+
+}
+
+.navbar ul li {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav-links {
+  height: 0;
+  overflow: hidden;
+  transition: all .3s linear;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.show-nav {
+  height: 100px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-links a {
+  color: #15B2D1;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  font-weight: bold;
+  display: inline-block;
+  padding: .5rem 0;
+  transition: color .3s;
+}
+
+.nav-links a:hover {
+  color: #236e95;
+}
+
+.defaultHero,.roomsHero {
+  min-height: calc(100vh - 66px);
+  background-image: url("./images/defaultHero.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  flex-direction: column;
+}
+
+.roomsHero {
+  background-image: url("./images/room-bg.jpeg");
+  min-height: 60vh;
+}
+
+.banner {
+  display: inline-block;
+  background-color: rgba(0,0,0.5);
+  text-align: center;
+  padding: 3rem 4.5rem;
+  letter-spacing: .2rem;
+  text-transform: capitalize;
+}
+
+.banner h2 {
+  color: #15B2D1;
+  font-size: 200%;
+}
+
+.banner p {
+  color: #15B2D1;
+  font-size: 1.2rem;
+  margin: 1rem 0 2rem;
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: #15b2d1;
+  padding: 1rem 2rem;
+  border-radius: 5px;
   color: white;
+  border: 2px solid transparent;
+  text-transform: uppercase;
+  transition: background .3s, color .3s, border .3s;
 }
 
-.App-link {
-  color: #61dafb;
+.btn-primary:hover {
+  background: transparent;
+  border: 2px solid #15b2d1;
+  color: #15B2D1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.section-title {
+  font-size: 2rem;
+  text-align: center;
+  margin: 2rem 0;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+
+}
+
+.section-title::after {
+  content: "";
+  display: inline-block;
+  height: 0.5rem;
+  vertical-align: bottom;
+  width: 80px;
+  border-top: 2px solid #15B2D1;
 }
